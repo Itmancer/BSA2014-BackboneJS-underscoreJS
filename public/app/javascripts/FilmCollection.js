@@ -7,4 +7,6 @@ var FilmCollection = Backbone.Collection.extend({
 
 });
 
+//FilmCollection.on("remove", new function() {alert('remove');})
+
 var films = new FilmCollection();

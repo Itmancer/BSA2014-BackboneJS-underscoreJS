@@ -1,5 +1,8 @@
 var FilmCollectionView = Backbone.View.extend({
 	el: '#films-container',
+	
+	template: _.template($('#films-template').html()),
+
 	initialize: function(){
 		this.collection.on('add', this.renderNewFilm, this);
 	},
@@ -10,6 +13,7 @@ var FilmCollectionView = Backbone.View.extend({
 		});
 		this.$el.append(view.$el);
 	}
+	
 });
 
 var filmsView = new FilmCollectionView({
