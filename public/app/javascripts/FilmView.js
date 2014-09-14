@@ -3,7 +3,7 @@ var FilmView = Backbone.View.extend({
 	template: _.template($('#film-template').html()),
 
 	events: {
-		"click .del-btn" : "delete"
+		"click .del-btn" : "deleteFilm"
 	},
 
 	initialize: function(){
@@ -15,12 +15,8 @@ var FilmView = Backbone.View.extend({
 		return this;
 	},
 
-	delete: function() {
-		alert(this.model.id);
-		this.model.destroy({
-			success: function() {},
-			error: function() {},
-			wait: true
-		});
+	deleteFilm: function() {
+		console.log("Deleting id="+this.model.id);
+		this.model.destroy();
 	}
 });
