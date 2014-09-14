@@ -6,10 +6,16 @@ var Router = Backbone.Router.extend({
 
 	start: function() {
 		console.log("start route");
+		$("#main").show();
+		$("#details").hide();
 	},
 
-	details: function(id) {
-		console.log("details route. Id="+id);
+	details: function(_id) {
+		var model = new Film({id:_id});
+		var filmDetailsView = new FilmDetailsView({model:model});
+		model.fetch();
+		$("#main").hide();
+		$("#details").show();
 	}
 });
 

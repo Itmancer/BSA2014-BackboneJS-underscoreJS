@@ -19,3 +19,7 @@
 .film-container{
 	clear: both;
 }
+
+.film-highlighted{
+	background-color:#99CCFF;
+}

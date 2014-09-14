@@ -3,7 +3,10 @@ var FilmView = Backbone.View.extend({
 	template: _.template($('#film-template').html()),
 
 	events: {
-		"click .del-btn" : "deleteFilm"
+		"click .del-btn" : "deleteFilm",
+		"mouseover" : "highlight",
+		"mouseout" : "unhighlight",
+		"click" : "selectFilm"
 	},
 
 	initialize: function(){
@@ -18,5 +21,20 @@ var FilmView = Backbone.View.extend({
 	deleteFilm: function() {
 		console.log("Deleting id="+this.model.id);
 		this.model.destroy();
+	},
+
+	highlight: function() {
+		console.log("Highlighting id="+this.model.id);
+		this.$el.addClass("film-highlighted");
+	},
+
+	unhighlight: function() {
+		console.log("Unhighlighting id="+this.model.id);
+		this.$el.removeClass("film-highlighted");
+	},
+
+	selectFilm: function() {
+		console.log("Selected film id="+this.model.id);
+		router.navigate("/film/"+this.model.id, true);
 	}
 });
