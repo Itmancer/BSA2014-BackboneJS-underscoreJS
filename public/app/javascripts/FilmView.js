@@ -4,8 +4,6 @@ var FilmView = Backbone.View.extend({
 
 	events: {
 		"click .del-btn" : "deleteFilm",
-		"mouseover" : "highlight",
-		"mouseout" : "unhighlight",
 		"click #film-content" : "selectFilm"
 	},
 
@@ -21,16 +19,6 @@ var FilmView = Backbone.View.extend({
 	deleteFilm: function() {
 		console.log("Deleting id="+this.model.id);
 		this.model.destroy();
-	},
-
-	highlight: function() {
-		console.log("Highlighting id="+this.model.id);
-		this.$el.addClass("film-highlighted");
-	},
-
-	unhighlight: function() {
-		console.log("Unhighlighting id="+this.model.id);
-		this.$el.removeClass("film-highlighted");
 	},
 
 	selectFilm: function() {

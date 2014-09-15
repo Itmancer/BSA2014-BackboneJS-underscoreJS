@@ -20,7 +20,7 @@
 	clear: both;
 }
 
-.film-highlighted{
+.film-container:hover{
 	background-color:#99CCFF;
 }
 
