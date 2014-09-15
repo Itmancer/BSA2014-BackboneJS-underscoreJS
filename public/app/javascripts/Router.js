@@ -11,7 +11,7 @@ var Router = Backbone.Router.extend({
 	},
 
 	details: function(_id) {
-		var model = new Film({id:_id});
+		var model = new FilmDetails({id:_id});
 		var filmDetailsView = new FilmDetailsView({model:model});
 		model.fetch();
 		$("#main").hide();

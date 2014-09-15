@@ -1,10 +1,10 @@
 var FilmDetails = Backbone.Model.extend({
-	urlRoot: 'api/filmdetails',
+	urlRoot: '/api/filmdetails',
 	defaults: {
 		id: undefined,
-		name: "http://www.saddlebackleather.com/c.1265306/shopflow/img/no_image_available.jpeg",
+		name: "",
 		year: 2014,
-		poster: "",
+		poster: "http://www.saddlebackleather.com/c.1265306/shopflow/img/no_image_available.jpeg",
 		details0: "details1",
 		details2: "details2",
 		details3: "details3",

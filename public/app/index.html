@@ -27,14 +27,24 @@
 		<button class="del-btn">x</button>
 	</script>
 	<script type='text/template' id="film-details-template">
-		<span class="film-name details"><%= name %></span><br/>
-		<span class="film-year details"><%= year %></span><br/>
-		<button id='save_return'>Save and Return</button>
+		<img class="film-detail-img" src=<%= poster %>></img>
+		<span class="detail-caption first-col">Title:</span><span class="film-details"><%= name %></span><br/>
+		<span class="detail-caption first-col">Year:</span><span class="film-details"><%= year %></span><br/>
+		<span class="detail-caption first-col">Details 1:</span><span class="film-details"><%= details0 %></span><br/>
+		<span class="detail-caption first-col">Details 2:</span><span class="film-details"><%= details2 %></span><br/>
+		<span class="detail-caption first-col">Details 3:</span><span class="film-details"><%= details3 %></span><br/>
+		<span class="detail-caption first-col">Details 4:</span><span class="film-details"><%= details4 %></span><br/>
+		<span class="detail-caption first-col">Details 5:</span><span class="film-details"><%= details5 %></span><br/>
+		<span class="detail-caption first-col">Details 6:</span><span class="film-details"><%= details6 %></span><br/>
+		<span class="detail-caption first-col">Details 7:</span><span class="film-details"><%= details7 %></span><br/>
+		<span class="detail-caption first-col">Details 8:</span><span class="film-details"><%= details8 %></span><br/>
+		<button id='back' class="first-col">To list</button>
 	</script>
 	<script src="./javascripts/jquery.js"></script>
 	<script src="./javascripts/underscore.js"></script>
 	<script src="./javascripts/backbone.js"></script>
 	<script src="./javascripts/Film.js"></script>
+	<script src="./javascripts/FilmDetails.js"></script>
 	<script src="./javascripts/FilmView.js"></script>
 	<script src="./javascripts/FilmCollection.js"></script>
 	<script src="./javascripts/FilmCollectionView.js"></script>

@@ -4,7 +4,7 @@ var FilmDetailsView = Backbone.View.extend({
 	template: _.template($('#film-details-template').html()),
 
 	events: {
-		"click #save_return": "saveReturn"
+		"click #back": "back"
 	},
 
 	initialize: function() {
@@ -16,7 +16,7 @@ var FilmDetailsView = Backbone.View.extend({
 		this.$el.html(this.template(this.model.toJSON()));
 	},
 
-	saveReturn: function() {
+	back: function() {
 		router.navigate("/", true);
 	}
 })
