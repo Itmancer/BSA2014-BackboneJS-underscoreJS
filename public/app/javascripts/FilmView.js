@@ -6,7 +6,7 @@ var FilmView = Backbone.View.extend({
 		"click .del-btn" : "deleteFilm",
 		"mouseover" : "highlight",
 		"mouseout" : "unhighlight",
-		"click" : "selectFilm"
+		"click #film-content" : "selectFilm"
 	},
 
 	initialize: function(){
