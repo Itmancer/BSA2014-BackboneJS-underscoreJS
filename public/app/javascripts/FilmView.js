@@ -4,7 +4,9 @@ var FilmView = Backbone.View.extend({
 
 	events: {
 		"click .del-btn" : "deleteFilm",
-		"click #film-content" : "selectFilm"
+		"dblclick .film-content" : "editing",
+		"click .film-content" : "selectFilm"
+		
 	},
 
 	initialize: function(){
@@ -24,5 +26,9 @@ var FilmView = Backbone.View.extend({
 	selectFilm: function() {
 		console.log("Selected film id="+this.model.id);
 		router.navigate("/film/"+this.model.id, true);
+	},
+
+	editing: function() {
+		console.log("Editing mode. Id="+this.model.id);
 	}
 });
