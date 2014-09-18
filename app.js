@@ -25,7 +25,7 @@ app.delete('/api/films/:id', function (req, res) {
 });
 
 app.put('/api/films/:id', function (req, res) {
-	var film = filmService.addFilm(req.params.id);
+	//var film = filmService.addFilm(req.params.id);
   filmService.addFilm(req.body);
   res.status(200);
 	res.end();
@@ -33,6 +33,18 @@ app.put('/api/films/:id', function (req, res) {
 
 app.get('/api/filmdetails/:id', function (req, res) {
 	res.send(filmService.getFilm(req.params.id));
+});
+
+app.put('/api/filmdetails', function (req, res) {
+	filmService.addFilm(req.body);
+	res.status(200);
+	res.end();
+});
+
+app.put('/api/filmdetails/:id', function (req, res) {
+	filmService.updateFilm(req.params.id, req.body);
+	res.status(200);
+	res.end();
 });
 
 app.get('/', function(req, res){
