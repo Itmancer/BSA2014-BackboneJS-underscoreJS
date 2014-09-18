@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-	<div id="main">		
+	<div id="main" class="frame">		
 		<div id="films-container"></div>
 		<div id="add-film-container">			
 			<span class="film-id">></span>
@@ -15,8 +15,9 @@
 			<button id="add_btn">+</button>
 		</div>
 	</div>
-	<div id="details">
-
+	<div id="details" class="frame">
+	</div>
+	<div id="edit" class="frame">
 	</div>
 	<script type="text/template" id="film-template">
 		<div class="film-content">
@@ -24,7 +25,8 @@
 			<span class="film-name"><%= name %></span>
 			<span class="film-year"><%= year %></span>
 		</div>
-		<button class="del-btn">x</button>
+		<button id = "del-btn" class="del-btn btn">x</button>
+		<button id = "edit-btn" class="edit-btn btn">e</button>
 	</script>
 	<script type='text/template' id="film-details-template">
 		<img class="film-detail-img" src=<%= poster %>></img>
@@ -40,6 +42,20 @@
 		<span class="detail-caption first-col">Details 8:</span><span class="film-details"><%= details8 %></span><br/>
 		<button id='back' class="first-col">To list</button>
 	</script>
+	<script type='text/template' id="film-edit-template">
+		<span class='edit-caption'>Title</span><input id="film-name" class="edit-film input" value="<%= name %>" ></input><br/>
+		<span class='edit-caption'>Year</span><input id="film-year" class="edit-film input" value="<%= year %>" ></input><br/>
+		<span class='edit-caption'>Details 1</span><input id="film-details0" class="edit-film input" value="<%= details0 %>" ></input><br/>
+		<span class='edit-caption'>Details 2</span><input id="film-details2" class="edit-film input" value="<%= details2 %>" ></input><br/>
+		<span class='edit-caption'>Details 3</span><input id="film-details3" class="edit-film input" value="<%= details3 %>" ></input><br/>
+		<span class='edit-caption'>Details 4</span><input id="film-details4" class="edit-film input" value="<%= details4 %>" ></input><br/>
+		<span class='edit-caption'>Details 5</span><input id="film-details5" class="edit-film input" value="<%= details5 %>" ></input><br/>
+		<span class='edit-caption'>Details 6</span><input id="film-details6" class="edit-film input" value="<%= details6 %>" ></input><br/>
+		<span class='edit-caption'>Details 7</span><input id="film-details7" class="edit-film input" value="<%= details7 %>" ></input><br/>
+		<span class='edit-caption'>Details 8</span><input id="film-details8" class="edit-film input" value="<%= details8 %>" ></input><br/>
+		<span class='edit-caption'>Poster URL</span><input id="film-poster" class="edit-film input" value="<%= poster %>" ></input><br/>
+		<button id='save'>Save and return</button>
+	</script>
 	<script src="./javascripts/jquery.js"></script>
 	<script src="./javascripts/underscore.js"></script>
 	<script src="./javascripts/backbone.js"></script>
@@ -50,6 +66,7 @@
 	<script src="./javascripts/FilmCollectionView.js"></script>
 	<script src="./javascripts/AddFilmView.js"></script>
 	<script src="./javascripts/FilmDetailsView.js"></script>
+	<script src="./javascripts/EditFilmView.js"></script>
 	<script src="./javascripts/Router.js"></script>
 </body>
 </html>

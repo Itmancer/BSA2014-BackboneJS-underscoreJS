@@ -28,14 +28,14 @@
 	background-color:#FF6666;
 }
 
-.detail-caption{
+.detail-caption, .edit-caption{
 	width: 100px;
 	display: block;
 	float: left;
 	line-height:50%;
 }
 
-.film-details{
+.film-details, .edit-film{
 	width: 600px;
 	display: block;
 	line-height:50%;

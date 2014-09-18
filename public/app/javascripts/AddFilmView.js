@@ -5,8 +5,6 @@ var AddFilmView = Backbone.View.extend({
 		"click #add_btn": "addFilm"
 	},
 
-	curId: 100,
-
 	addFilm: function() {
 		var name = this.$(".film-name").val();
 		var year = this.$(".film-year").val();
@@ -25,4 +23,4 @@ var AddFilmView = Backbone.View.extend({
 	}
 });
 
-var addFilmView = new AddFilmView({collection:films});
+//var addFilmView = new AddFilmView({collection:films});

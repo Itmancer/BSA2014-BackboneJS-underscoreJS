@@ -3,9 +3,9 @@ var FilmView = Backbone.View.extend({
 	template: _.template($('#film-template').html()),
 
 	events: {
-		"click .del-btn" : "deleteFilm",
-		"dblclick .film-content" : "editing",
-		"click .film-content" : "selectFilm"
+		"click #del-btn" : "deleteFilm",
+		"click .film-content" : "selectFilm",
+		"click #edit-btn" : "editFilm"
 		
 	},
 
@@ -28,7 +28,8 @@ var FilmView = Backbone.View.extend({
 		router.navigate("/film/"+this.model.id, true);
 	},
 
-	editing: function() {
-		console.log("Editing mode. Id="+this.model.id);
+	editFilm: function() {
+		console.log("Edit button pressed. Id="+this.model.id);
+		router.navigate("/edit/" + this.model.id, true);
 	}
 });
