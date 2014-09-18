@@ -5,7 +5,8 @@ var FilmView = Backbone.View.extend({
 	events: {
 		"click #del-btn" : "deleteFilm",
 		"click .film-content" : "selectFilm",
-		"click #edit-btn" : "editFilm"
+		"click #edit-btn" : "editFilm",
+		"changed" : "render"
 		
 	},
 

@@ -9,6 +9,10 @@ var AddFilmView = Backbone.View.extend({
 		var name = this.$(".film-name").val();
 		var year = this.$(".film-year").val();
 		console.log('Add Film Button Pressed. Name: '+ name+", Year: "+year);
+		var newFilm = new Film({name:"abc", year: 1000});
+		//newFilm.save();
+		films.create(newFilm);
+		/*
 		if (name.trim().length && year.trim().length) {
 			var newFilm = new Film({name: name, year:year});
 			newFilm.save(); //don't know why but at this place 2 models created: one - with default values and another - with provided ones
@@ -19,8 +23,8 @@ var AddFilmView = Backbone.View.extend({
 		}
 		else {
 			this.$el.addClass("error");
-		}
+		}*/
 	}
 });
 
-//var addFilmView = new AddFilmView({collection:films});
+var addFilmView = new AddFilmView({collection:films});
